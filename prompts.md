@@ -229,3 +229,12 @@ Para la entrega se siguió el README del curso, no `CLAUDE.md`:
 - El mensaje de commit es el que fija el README, no uno generado con `/commit` (R4).
 - No se pasó `adversarial-reviewer` (R8): el cambio no toca código ni specs.
 ```
+
+## Prompt 10
+
+**Modelo:** Opus 5.5
+**Herramienta:** Claude Code
+
+```
+acaba
+```
