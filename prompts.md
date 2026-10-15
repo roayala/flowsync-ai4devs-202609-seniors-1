@@ -238,3 +238,21 @@ Para la entrega se siguió el README del curso, no `CLAUDE.md`:
 ```
 acaba
 ```
+
+## Prompt 11
+
+**Modelo:** Opus 5.5
+**Herramienta:** Claude Code
+
+```
+redacta las lienas
+```
+
+## Prompt 12
+
+**Modelo:** Opus 5.5
+**Herramienta:** Claude Code
+
+```
+haz pr
+```

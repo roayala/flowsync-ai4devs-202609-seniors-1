@@ -33,6 +33,6 @@ Registrada el 2026-10-14 a las 23:00, antes de ejecutar ningún comando sobre el
 
 ## Parte B
 
-1. **Regla en la que más me equivoqué:**
-2. **Regla que no se puede comprobar:**
-3. **Regla que eliminaría:**
+1. **Regla en la que más me equivoqué:** R2. Aposté «sí» y no se cumple: no hay ni una rama `feat/*` y la de esta misma auditoría (`auditoria-roas`) se creó con el nombre que pide el README del curso sin que nadie notara que contradecía `CLAUDE.md`. De mis ocho «sí», solo R5 y R6 se pudieron confirmar; el resto eran impresiones.
+2. **Regla que no se puede comprobar:** R3. Git no guarda en qué rama se hizo un commit, y un fast-forward deja la misma huella que un commit directo. Para verificarla habría que convertirla en una comprobación automática (protección de rama en GitHub o un hook `pre-commit` que rechace `main` y `sN/*`), que además deja rastro.
+3. **Regla que eliminaría:** R2, por el caso de «nadie la sigue y no aporta valor». No hay ninguna rama `feat/*` y el propio curso pide otro nombre; lo que protege de verdad es R3, no cómo se llame la rama. Por eso la borraría en vez de automatizarla, como marqué en la tabla.
