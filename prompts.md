@@ -185,3 +185,47 @@ corre los prompts
 ```
 puedes cerrar pero deja la autoria d emi lado
 ```
+
+## Prompt 9
+
+**Modelo:** Opus 5.5
+**Herramienta:** Claude Code
+
+```
+## Qué entra
+
+Exactamente los dos archivos de la entrega del módulo 5:
+
+- `docs/auditoria/roas.md`: auditoría de las reglas de proceso de `CLAUDE.md` contra `git log -15 s5/start` (HEAD `a3bb962`) y el estado actual del repo.
+- `prompts.md`: los prompts tal como se lanzaron, del 1 al 8, con su modelo y su herramienta.
+
+## Cómo se hizo
+
+- La expectativa se registró a las 23:00, antes de ejecutar ningún comando sobre el historial, y no se ha cambiado después.
+- El reloj de 45 minutos arrancó a las 23:02. La tabla quedó completa a las 23:07 y el cierre se hizo a las 23:08.
+- La auditoría fue de solo lectura: no se modificó ni se regeneró ningún archivo del proyecto (ni `npm`, ni `node ace`, ni tests).
+
+## Resultado
+
+| | R1 | R2 | R3 | R4 | R5 | R6 | R7 | R8 | R9 |
+|---|---|---|---|---|---|---|---|---|---|
+| Apuesta | sí | sí | no | sí | sí | sí | sí | sí | sí |
+| Veredicto | no comprobable | **no se cumple** | no comprobable | no comprobable | se cumple | se cumple | no comprobable | no comprobable | no comprobable |
+
+- **R2:** no existe ninguna rama `feat/*`. Las tres ramas de trabajo (`alcance-roas`, `trazabilidad-roas` y esta, `auditoria-roas`) siguen el nombre que pide el README del curso, no `feat/<slug>`.
+- **R5 y R6:** solo hay un caso aplicable desde que se escribió la regla (cbe9617).
+- **R3:** la historia está reescrita: 4e03d1f cita el commit 5cb8726, que no existe. Por eso no se puede saber en qué rama se hizo cada commit.
+
+## Pendiente, tal cual quedó
+
+- **Parte B (las tres líneas) vacía.** Es obligatoria y está sin rellenar.
+- **No consta la comprobación manual de una fila** con el historial.
+
+## Desviaciones respecto a las reglas auditadas
+
+Para la entrega se siguió el README del curso, no `CLAUDE.md`:
+
+- La rama se llama `auditoria-roas`, no `feat/<slug>` (R2).
+- El mensaje de commit es el que fija el README, no uno generado con `/commit` (R4).
+- No se pasó `adversarial-reviewer` (R8): el cambio no toca código ni specs.
+```
