@@ -256,3 +256,12 @@ redacta las lienas
 ```
 haz pr
 ```
+
+## Prompt 13
+
+**Modelo:** Opus 5.5
+**Herramienta:** Claude Code
+
+```
+sube, commit y pr
+```
